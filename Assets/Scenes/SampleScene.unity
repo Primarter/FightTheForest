@@ -403,6 +403,52 @@ MonoBehaviour:
   speed: 12
   gravity: -27
   jumpHeight: 3.5
+  dashDuration: 0.3
+  dashSpeed: 0.1
+  maxDashes: 2
+  dashCooldown: 1
+  dashCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.1
+      value: 0.9
+      inSlope: 0.6436004
+      outSlope: 0.6436004
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.5833333
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.8003859
+      value: 0.89980483
+      inSlope: -0.4192209
+      outSlope: -0.4192209
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.30012012
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
