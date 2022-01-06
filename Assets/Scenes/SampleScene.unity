@@ -135,7 +135,7 @@ GameObject:
   m_Layer: 0
   m_Name: GroundCheck
   m_TagString: Untagged
-  m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -240,7 +240,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh15730
+  m_Name: pb_Mesh15720
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -575,7 +575,7 @@ GameObject:
   - component: {fileID: 544057986}
   - component: {fileID: 544057985}
   - component: {fileID: 544057984}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -750,7 +750,7 @@ MonoBehaviour:
   jumpHeight: 3.5
   dashDuration: 0.2
   dashSpeed: 0.3
-  maxDashes: 2
+  maxDashes: 0
   dashCooldown: 1
   dashCurve:
     serializedVersion: 2
@@ -1460,7 +1460,7 @@ MonoBehaviour:
   forceMultiplier: 10
   shootableLayer:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 448
   onHitSpawn: {fileID: 6075306227479076974, guid: 368fca2044ef94449bbd6f1318da93c0, type: 3}
 --- !u!1 &867695006
 GameObject:
@@ -3452,7 +3452,7 @@ GameObject:
   - component: {fileID: 1702801519}
   - component: {fileID: 1702801524}
   - component: {fileID: 1702801525}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}

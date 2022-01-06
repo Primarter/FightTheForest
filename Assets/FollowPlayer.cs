@@ -66,4 +66,10 @@ public class FollowPlayer : MonoBehaviour
             transform.rotation = Quaternion.LookRotation(newDirection);
         }
     }
+
+    void OnDrawGizmos()
+    {
+        Gizmos.color = Color.blue;
+        Gizmos.DrawWireSphere(transform.position, lockDistance);
+    }
 }
