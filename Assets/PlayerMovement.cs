@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
@@ -7,7 +5,7 @@ public class PlayerMovement : MonoBehaviour
     public CharacterController controller;
     public Transform groundCheck;
 
-    public float groundDistance = 0.4f;
+    public float groundRadiusCheck = 0.4f;
     public LayerMask groundMask;
     public float speed = 12f;
     public float gravity = -27f;
@@ -38,7 +36,7 @@ public class PlayerMovement : MonoBehaviour
             sw.Restart();
         }
 
-        isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
+        isGrounded = Physics.CheckSphere(groundCheck.position, groundRadiusCheck, groundMask);
 
         if (isGrounded && velocity.y < 0) {
             velocity.y = -2f;
@@ -50,7 +48,6 @@ public class PlayerMovement : MonoBehaviour
         Vector3 direction = transform.right * x + transform.forward * z;
 
         if ((Input.GetButtonDown("Dash") || Input.GetButtonDown("Fire2")) && nbDashes > 0) {
-            Debug.Log("Dash");
             if (nbDashes == maxDashes) sw.Restart();
             nbDashes--;
             dashInc = 0f;
@@ -70,5 +67,9 @@ public class PlayerMovement : MonoBehaviour
         velocity.y += gravity * Time.deltaTime;
 
         controller.Move(velocity * Time.deltaTime);
+    }
+
+    void OnDrawGizmos() {
+        Gizmos.DrawWireSphere(groundCheck.position, groundRadiusCheck);
     }
 }
