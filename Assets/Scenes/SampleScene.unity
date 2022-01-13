@@ -240,7 +240,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh15720
+  m_Name: pb_Mesh21194
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -3452,6 +3452,7 @@ GameObject:
   - component: {fileID: 1702801519}
   - component: {fileID: 1702801524}
   - component: {fileID: 1702801525}
+  - component: {fileID: 1702801526}
   m_Layer: 7
   m_Name: Enemy
   m_TagString: Untagged
@@ -3586,6 +3587,21 @@ MonoBehaviour:
   lockDistance: 0
   range: 2
   target: {fileID: 552129149}
+--- !u!114 &1702801526
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1702801518}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1dd9bc97c9e6844d88055a874cd3fea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  layer:
+    serializedVersion: 2
+    m_Bits: 128
 --- !u!1 &1745358053
 GameObject:
   m_ObjectHideFlags: 0
