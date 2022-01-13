@@ -26,10 +26,15 @@ public class GetShot : MonoBehaviour
         if (hitpoints == null) return;
 
         foreach (GameObject hp in hitpoints) {
-            if (Physics.CheckSphere(hp.transform.position, 0.5f, layer)) {
-                Destroy(hp);
-                life -= 10;
-                agent.speed = 0;
+            Collider[] hitColliders = Physics.OverlapSphere(hp.transform.position, 0.5f);
+            if (hitColliders == null) return;
+
+            foreach (var hitCollider in hitColliders) {
+                if (hitCollider.gameObject.name == gameObject.name) {
+                    Destroy(hp);
+                    life -= 10;
+                    agent.speed = 0;
+                }
             }
         }
     }
