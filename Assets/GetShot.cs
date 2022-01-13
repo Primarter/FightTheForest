@@ -6,18 +6,17 @@ using UnityEngine.AI;
 public class GetShot : MonoBehaviour
 {
 
-    public int life;
+    public int life = 100;
     public LayerMask layer;
-    public GameObject self;
-    public NavMeshAgent agent;
+    private NavMeshAgent agent;
 
     void Start() {
-        agent = self.GetComponent<NavMeshAgent>();
+        agent = gameObject.GetComponent<NavMeshAgent>();
     }
 
     private void Die() {
         if (life <= 0) {
-            Destroy(self);
+            Destroy(gameObject);
         }
     }
 
