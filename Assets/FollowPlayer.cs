@@ -37,6 +37,12 @@ public class FollowPlayer : MonoBehaviour
             } else if (range > 4) {
                     // animator.SetBool("isFiring", false);
             }
+
+            /*
+                This allow the zombie to follow the player inside a defined range
+                As we want the zombie to act like Call of Duty one we need him to always reach the player
+                Therefor this code is unused but stay commented in case we switch to this later
+
             if ((target.transform.position - transform.position).magnitude > lockDistance) {
                 this.GetComponent<MoveToDest>().unsetMoveTarget();
                 if (range > 4) {
@@ -44,7 +50,8 @@ public class FollowPlayer : MonoBehaviour
                 }
             } else {
                 this.GetComponent<MoveToDest>().setMoveTarget(target.transform.position);
-            }
+            }*/
+            this.GetComponent<MoveToDest>().setMoveTarget(target.transform.position);
         }
     }
 
