@@ -7,6 +7,7 @@ public class GetShot : MonoBehaviour
 {
 
     public int life = 100;
+    public float maxSpeed = 5;
     public LayerMask layer;
     private NavMeshAgent agent;
 
@@ -40,11 +41,11 @@ public class GetShot : MonoBehaviour
     }
 
     void FixedUpdate() {
-        if (agent.speed < 5) {
+        if (agent.speed < maxSpeed) {
             agent.speed += 0.1f;
         }
-        if (agent.speed > 5) {
-            agent.speed = 5;
+        if (agent.speed > maxSpeed) {
+            agent.speed = maxSpeed;
         }
     }
 }
