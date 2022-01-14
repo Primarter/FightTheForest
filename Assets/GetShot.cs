@@ -21,27 +21,13 @@ public class GetShot : MonoBehaviour
         }
     }
 
-    private void Hit() {
-        Object[] hitpoints = GameObject.FindGameObjectsWithTag("Hit Point");
-        if (hitpoints == null) return;
-
-        foreach (GameObject hp in hitpoints) {
-            Collider[] hitColliders = Physics.OverlapSphere(hp.transform.position, 0.5f);
-            if (hitColliders == null) return;
-
-            foreach (var hitCollider in hitColliders) {
-                if (hitCollider.gameObject.name == gameObject.name) {
-                    Destroy(hp);
-                    life -= 10;
-                    agent.speed = 0;
-                }
-            }
-        }
+    private void Hit(int damage) {
+        life -= damage;
+        agent.speed = 0;
     }
 
     void Update()
     {
-        Hit();
         Die();
     }
 

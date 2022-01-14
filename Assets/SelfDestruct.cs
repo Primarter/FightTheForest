@@ -11,6 +11,11 @@ public class SelfDestruct : MonoBehaviour
         sw.Start();
     }
 
+    void Die()
+    {
+        tag = "Dying";
+    }
+
     void Update()
     {
         if (sw.ElapsedMilliseconds >= lifetime * 1000) {
