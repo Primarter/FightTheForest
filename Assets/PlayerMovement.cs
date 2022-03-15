@@ -42,17 +42,17 @@ public class PlayerMovement : MonoBehaviour
             velocity.y = -2f;
         }
 
-        float x = Input.GetAxis("Horizontal");
-        float z = Input.GetAxis("Vertical");
+        float x =0;// Input.GetAxis("Horizontal");
+        float z =0;// Input.GetAxis("Vertical");
 
         Vector3 direction = transform.right * x + transform.forward * z;
 
-        if ((Input.GetButtonDown("Dash") || Input.GetButtonDown("Fire2")) && nbDashes > 0) {
-            if (nbDashes == maxDashes) sw.Restart();
-            nbDashes--;
-            dashInc = 0f;
-            dashDirection = x != 0 || z != 0 ? direction : transform.forward;
-        }
+        // if ((Input.GetButtonDown("Dash") || Input.GetButtonDown("Fire2")) && nbDashes > 0) {
+        //     if (nbDashes == maxDashes) sw.Restart();
+        //     nbDashes--;
+        //     dashInc = 0f;
+        //     dashDirection = x != 0 || z != 0 ? direction : transform.forward;
+        // }
 
         if (dashInc < 1) {
             dashInc += Time.deltaTime / dashDuration;
@@ -60,9 +60,9 @@ public class PlayerMovement : MonoBehaviour
         } else
             controller.Move(direction * speed * Time.deltaTime);
 
-        if (Input.GetButtonDown("Jump") && isGrounded) {
-            velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
-        }
+        // if (Input.GetButtonDown("Jump") && isGrounded) {
+        //     velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
+        // }
 
         velocity.y += gravity * Time.deltaTime;
 

@@ -16,7 +16,7 @@ public class Shoot : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetButtonDown("Fire1")) {
+        if (false) {//Input.GetButtonDown("Fire1")) {
             if (Physics.Raycast(viewCamera.transform.position, viewCamera.transform.forward,
             out RaycastHit hitInfo, range, shootableLayer)) {
                 if (hitInfo.rigidbody != null) {
